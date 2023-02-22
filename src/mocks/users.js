@@ -1,17 +1,14 @@
 module.exports = [
   {
     id: 1,
-    nome: 'jose',
-    idade: 25
+    nome: 'maria',
   },
   {
     id: 2,
-    nome: 'maria',
-    idade: 30
+    nome: 'jose',
   },
   {
     id: 3,
-    nome: 'joao',
-    idade: 50
+    nome: 'joao'
   }
 ]
