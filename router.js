@@ -1,16 +1,19 @@
-const useController = require('./src/Controllers/UseController');
+const useController = require('./src/Controllers/UserController');
 
 module.exports = [
-
   {
     endpoint: '/users',
     method: 'GET',
-    handler: useController.ListUsers,
+    handler: useController.ListUsers
   },
   {
-    endpoint: '/products/:id',
+    endpoint: '/users/:id',
     method: 'GET',
-    handler: useController.GetListId
+    handler: useController.ListProducts
+  },
+  {
+    endpoint: '/users',
+    method: 'POST',
+    handler: useController.CreateUser
   }
-
 ]
