@@ -31,8 +31,10 @@ module.exports = {
 
   CreateUser(req, res) {
     const {body} = req;
-
+    
+    
     const lastUser = users[users.length - 1].id;
+  
     const newUser = {
       id: lastUser + 1,
       name: body.name,
@@ -69,8 +71,15 @@ module.exports = {
 
     res.send(200, {id, name})
 
+  },
 
+  deleteUser(req, res) {
+    let { id } = req.params;
+    id = Number(id);
 
+    users = users.filter((user) => user.id !== id);
+
+    res.send(200, { Deleted: true})
   }
 
 
