@@ -1,4 +1,4 @@
-function bodyParser( req, callback) {
+function parseUser(req, callback) {
   let body = '';
 
   req.on('data', (chunk) => {
@@ -9,8 +9,9 @@ function bodyParser( req, callback) {
     body = JSON.parse(body);
     req.body = body;
 
-   callback()
-  });
+    callback()
+
+  })
 }
 
-module.exports = bodyParser;
+module.exports = parseUser;
